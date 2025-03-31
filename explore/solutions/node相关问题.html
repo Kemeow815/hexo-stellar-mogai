@@ -435,10 +435,7 @@
       };
       utils.js('/js/plugins/copycode.js');
     }
-  });</script><script src="/js/extra.js"></script><script src="/vendor/js/snow.js"></script><script src="/vendor/js/lantern.js"></script><script data-website-id="91357f39-3d88-42f3-bf11-e1c1206ac8ab" src="https://logsphere.codepzj.cn/js/track.js"></script></div><script src="/vendor/js/echarts.min.js"></script>
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+  });</script><script src="/js/extra.js"></script><script src="/vendor/js/snow.js"></script><script src="/vendor/js/lantern.js"></script><script data-website-id="91357f39-3d88-42f3-bf11-e1c1206ac8ab" src="https://logsphere.codepzj.cn/js/track.js"></script></div><script src="/vendor/js/echarts.min.js"></script><script>document.addEventListener("DOMContentLoaded", function() {
                 const heatmapChartDom = document.getElementById('heatmapChart');
                 if(heatmapChartDom){
                     const heatmapChart = echarts.init(heatmapChartDom, 'light');
@@ -456,7 +453,7 @@
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2024-08-16",1],["2024-08-27",1],["2024-08-31",1],["2024-09-01",2],["2024-09-02",1],["2024-09-15",1],["2024-09-20",1],["2024-09-24",1],["2024-09-25",1],["2024-09-27",1],["2024-10-01",1],["2024-10-07",1],["2024-10-08",1],["2024-10-09",2],["2024-10-10",1],["2024-10-12",1],["2024-10-16",1],["2024-10-20",1],["2024-10-22",1],["2024-10-31",1],["2024-11-02",1],["2024-11-10",3],["2024-11-11",1],["2024-11-14",2],["2024-11-17",1],["2024-11-23",1],["2024-11-24",1],["2024-11-27",1],["2024-12-01",1],["2024-12-02",2],["2024-12-05",1],["2024-12-06",1],["2024-12-07",2],["2024-12-12",2],["2024-12-13",1],["2024-12-24",1],["2024-12-31",1],["2025-01-02",1],["2025-01-19",1]]);
+                    const groupedData = groupByYear([["2025-01-02",1],["2025-01-19",1]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -560,26 +557,21 @@
                         }
                     });
                 }
-            });
-        </script>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            });</script><script>document.addEventListener("DOMContentLoaded", function() {
                 const monthlyChartDom = document.getElementById('monthlyChart');
                 if(monthlyChartDom){
                     const monthlyChart = echarts.init(monthlyChartDom, 'light');
                     monthlyChart.setOption({
                         xAxis: { 
                             type: 'category', 
-                            data: ["2024-08","2024-09","2024-10","2024-11","2024-12","2025-01"], 
+                            data: ["2025-01"], 
                             axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         },
                         yAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [3,8,11,11,12,2],
+                            data: [2],
                             smooth: true,
                             lineStyle: { color: '#5470C6', width: 2 },
                             itemStyle: { color: '#5470C6' },
@@ -602,12 +594,7 @@
                         window.location.href = '/archives/' + year + '/' + month;
                     });
                 }
-            })
-        </script>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            })</script><script>document.addEventListener("DOMContentLoaded", function() {
                 const tagsChartDom = document.getElementById('tagsChart');
                 if(tagsChartDom){
                     const tagsChart = echarts.init(tagsChartDom, 'light');
@@ -616,7 +603,7 @@
                         series: [{
                             type: 'pie',
                             radius: '60%',
-                            data: [{"name":"stellar","value":5},{"name":"docker","value":4},{"name":"css","value":3},{"name":"git","value":3},{"name":"npm","value":3},{"name":"golang","value":3},{"name":"github","value":2},{"name":"cloudfare","value":2}],
+                            data: [{"name":"github","value":1},{"name":"pull request","value":1},{"name":"vscode","value":1}],
                             label: {
                                 position: 'outside',
                                 formatter: '{b} {c} ({d}%)',
@@ -630,7 +617,7 @@
                         legend: {
                             bottom: '0',
                             left: 'center',
-                            data: [{"name":"stellar","value":5},{"name":"docker","value":4},{"name":"css","value":3},{"name":"git","value":3},{"name":"npm","value":3},{"name":"golang","value":3},{"name":"github","value":2},{"name":"cloudfare","value":2}].map(tag => tag.name),
+                            data: [{"name":"github","value":1},{"name":"pull request","value":1},{"name":"vscode","value":1}].map(tag => tag.name),
                             textStyle: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         }
                     });
@@ -639,12 +626,7 @@
                         window.location.href = '/tags/' + params.name;
                     });
                 }
-            })
-        </script>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            })</script><script>document.addEventListener("DOMContentLoaded", function() {
                 const categoriesChartDom = document.getElementById('categoriesChart');
                 if(categoriesChartDom){
                     const categoriesChart = echarts.init(categoriesChartDom, 'light');
@@ -652,13 +634,13 @@
                         xAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
                         yAxis: { 
                             type: 'category', 
-                            data: [{"name":"技术分享","value":37},{"name":"生活思考","value":3},{"name":"产品思考","value":2},{"name":"设计开发","value":2},{"name":"在线工具","value":1}].map(category => category.name).reverse(), 
+                            data: [{"name":"技术分享","value":2}].map(category => category.name).reverse(), 
                             axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         },
                         series: [{
                             name: 'Category Count',
                             type: 'bar',
-                            data: [{"name":"技术分享","value":37},{"name":"生活思考","value":3},{"name":"产品思考","value":2},{"name":"设计开发","value":2},{"name":"在线工具","value":1}].map(category => category.value).reverse(),
+                            data: [{"name":"技术分享","value":2}].map(category => category.value).reverse(),
                             label: {
                                 show: true,
                                 position: 'right',
@@ -681,12 +663,7 @@
                         window.location.href = '/categories/' + params.name;
                     });
                 }
-            });
-        </script>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            });</script><script>document.addEventListener("DOMContentLoaded", function() {
                 const categoriesTreeChartDom = document.getElementById('categoriesTreeChart');
                 if(categoriesTreeChartDom){
                     const treeChart = echarts.init(categoriesTreeChartDom, 'light');
@@ -707,7 +684,7 @@
                         },
                         series: [{
                             type: 'tree',
-                            data: [{"name":"Categories","children":[{"name":"技术分享","children":[],"count":37,"path":"技术分享"},{"name":"产品思考","children":[],"count":2,"path":"产品思考"},{"name":"生活思考","children":[],"count":3,"path":"生活思考"},{"name":"设计开发","children":[],"count":2,"path":"设计开发"},{"name":"在线工具","children":[],"count":1,"path":"在线工具"},{"name":"日常小事","children":[],"count":1,"path":"日常小事"},{"name":"项目分析","children":[],"count":1,"path":"项目分析"}],"count":0,"path":""}],
+                            data: [{"name":"Categories","children":[{"name":"技术分享","children":[],"count":2,"path":"技术分享"}],"count":0,"path":""}],
                             initialTreeDepth: -1,
                             top: '5%',
                             bottom: '10%',
@@ -750,7 +727,4 @@
                         }
                     });
                 }
-            });
-        </script>
-    
-    </body></html>
+            });</script></body></html>
